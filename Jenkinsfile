@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script {
                     sh 'chmod +x ./gradlew'
-                    sh './gradlew clean test --no-daemon'
+                    sh './gradlew clean build --no-daemon'
                 }
             }
         }
