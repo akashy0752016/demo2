@@ -21,7 +21,7 @@ pipeline {
                 sh 'docker tag demo2 akashy075/demo2:latest'
             }
         }
-        stage('Docker Build and Tag') {
+        stage('Publish image to Docker Hub') {
            withDockerRegistry([ credentialsId: "dockerHub", url: "" ])
            steps {
                 sh 'docker build -t demo2:latest .'
