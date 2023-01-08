@@ -15,5 +15,18 @@ pipeline {
                 }
             }
         }
+        stage('Docker Build and Tag') {
+           steps {
+                sh 'docker build -t demo2:latest .'
+                sh 'docker tag demo2 akashy075/demo2:latest'
+            }
+        }
+        stage('Docker Build and Tag') {
+           withDockerRegistry([ credentialsId: "dockerHub", url: "" ])
+           steps {
+                sh 'docker build -t demo2:latest .'
+                sh 'docker tag demo2 akashy075/demo2:latest'
+            }
+        }
     }
 }
