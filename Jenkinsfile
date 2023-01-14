@@ -26,7 +26,9 @@ pipeline {
         stage('Publish image to Docker Hub') {
            steps {
                 script {
-                    sh 'docker push akashy075/demo2:latest'
+                    withCredentials([usernamePassword(credentialsId: 'dockerHub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
+                        sh 'docker push akashy075/demo2:latest'
+                    }
                 }
            }
         }
