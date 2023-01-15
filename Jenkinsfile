@@ -16,8 +16,12 @@ pipeline {
             }
         }
         stage('SonarQube Analysis') {
-            withSonarQubeEnv() {
-                sh "./gradlew sonar"
+            steps {
+                script {
+                    withSonarQubeEnv() {
+                        sh "./gradlew sonar"
+                    }
+                }
             }
         }
         stage('Docker Build and Tag') {
