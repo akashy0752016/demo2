@@ -40,5 +40,7 @@ sonar {
   properties {
     property("sonar.projectKey", "akashy0752016_demo2_AYj0FKLl5a3fG0F_uxFI")
     property("sonar.projectName", "demo2")
+    property("sonar.host.url", "http://localhost:9000")
+    property("sonar.token", "sqp_4edb173ae50917740387e4543121563820159859")
   }
 }
