@@ -5,7 +5,7 @@ plugins {
     id("io.spring.dependency-management") version "1.1.0"
     kotlin("jvm") version "1.7.22"
     kotlin("plugin.spring") version "1.7.22"
-    id("org.sonarqube") version "3.5.0.2730"
+    id("org.sonarqube") version "4.2.1.3168"
 }
 
 group = "com.example"
@@ -37,7 +37,8 @@ tasks.withType<Test> {
 }
 
 sonar {
-    properties {
-        property("sonar.projectKey", "demo2")
-    }
+  properties {
+    property "sonar.projectKey", "akashy0752016_demo2_AYj0FKLl5a3fG0F_uxFI"
+    property "sonar.projectName", "demo2"
+  }
 }
