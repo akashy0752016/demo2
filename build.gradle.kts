@@ -38,7 +38,7 @@ tasks.withType<Test> {
 
 sonar {
   properties {
-    property "sonar.projectKey", "akashy0752016_demo2_AYj0FKLl5a3fG0F_uxFI"
-    property "sonar.projectName", "demo2"
+    property("sonar.projectKey", "akashy0752016_demo2_AYj0FKLl5a3fG0F_uxFI")
+    property("sonar.projectName", "demo2")
   }
 }
